@@ -1,0 +1,39 @@
+<div class="container mt-3">
+  <div class="card">
+    <div class="card-header text-center text-primary">
+      <b>Liste des employées</b>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead>
+        <tr class="text-primary">
+          <th style="text-align:center">ID</th>
+          <th style="text-align:center">PRENOM</th>
+          <th style="text-align:center">NOM</th>
+          <th style="text-align:center">POSTE</th>
+          <th style="text-align:center"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let employee of listeDesEmployees ">
+          <td style="text-align:center" class="bg-light">{{employee.id}}</td>
+          <td style="text-align:center" >{{employee.prenom}}</td>
+          <td style="text-align:center" class="bg-light">{{employee.nom}}</td>
+          <td style="text-align:center" >{{employee.proffession}}</td>
+          <td class="bg-light">
+            <button (click)="modifier(employee)" class="btn btn-primary">
+              <i class="bi bi-input-cursor-text"></i>
+            </button>
+            <button (click)="supprimer(employee)" class="btn btn-danger ms-lg-3">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+  </div>
+
+</div>

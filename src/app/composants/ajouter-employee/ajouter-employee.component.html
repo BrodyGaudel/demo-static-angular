@@ -1,0 +1,35 @@
+<div class="container mt-3">
+  <div class="card col-md-6 offset-3 shadow">
+    <div class="card-header text-primary text-center">
+      <b class="card-title">Ajouter un employee</b>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label >ID Produit</label>
+          <input type="text" [(ngModel)]="newEmployee.id" name="id" class="form-control">
+        </div>
+
+        <div class="mb-3" >
+          <label >Prénom</label>
+          <input type="text" [(ngModel)]= "newEmployee.prenom" name="prenom" class="form-control">
+        </div>
+
+        <div class="mb-3" >
+          <label >Nom</label>
+          <input type="text" [(ngModel)]= "newEmployee.nom" name="nom" class="form-control">
+        </div>
+
+        <div class="mb-3" >
+          <label >Poste</label>
+          <input type="text" [(ngModel)]= "newEmployee.proffession" name="proffession" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <button type="submit" (click)="ajouterEmployee()" class="btn btn-success">Ajouter</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
